@@ -9,7 +9,7 @@ def walkdir(dirname: str) -> list[str]:
         while head:
             pref += '...'
             head, _tail = os.path.split(head)
-        print(pref+tail)
+        tree.append(pref+tail)
         for file in files:
             tree.append(pref+file)
     return tree
